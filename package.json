@@ -1,0 +1,17 @@
+{
+  "name": "portfolio-junior-front-end",
+  "version": "1.0.0",
+  "description": "junior front-end dev portfolio",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass"
+  },
+  "author": "monika dembek",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.9.0",
+    "npm-run-all": "^4.1.3"
+  }
+}
