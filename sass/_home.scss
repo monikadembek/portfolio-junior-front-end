@@ -1,0 +1,75 @@
+.modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 50%;
+	max-width: 630px;
+	min-width: 320px;
+	height: auto;
+	z-index: 2000;
+	visibility: hidden;
+	backface-visibility: hidden;
+	transform: translate(-50%, -50%);
+}
+
+.modal-show {
+	visibility: visible;
+}
+
+.modal__content {
+	background: $color-primary;
+	padding: 30px;
+	color: white;
+}
+
+.modal__overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	visibility: hidden;
+	opacity: 0;
+	background: rgba(0,0,0, 0.9);
+	transition: all 0.3s;	
+}
+
+.modal-show ~ .modal__overlay {
+	opacity: 1;
+	visibility: visible;
+}
+
+.modal-effect-1 .modal__content {
+	transform: scale(0) rotate(720deg);
+	opacity: 0;
+	transition: all 0.5s;
+} 
+
+.modal-show.modal-effect-1 .modal__content {
+	transform: scale(1) rotate(0deg);
+	opacity: 1;
+}
+
+
+
+/* Effect 5: fall */
+.modal-effect-5.modal {
+	perspective: 1300px;
+}
+
+.modal-effect-5 .modal__content {
+	transform-style: preserve-3d; 
+	transform: translateZ(600px) rotateX(20deg); 
+	opacity: 0;
+}
+
+.modal-show.modal-effect-5 .modal__content {
+	transition: all 0.3s ease-in;
+	transform: translateZ(0px) rotateX(0deg); 
+	opacity: 1;
+}
+
+body  {
+	perspective: 600px;
+}
