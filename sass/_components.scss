@@ -1,0 +1,131 @@
+// ----------- buttons ---------------------
+.btn-round {
+  color: white;
+  text-transform: uppercase;
+  font-family: $font-stack;
+  font-weight: 400;
+  padding: 8px 18px;
+  border: 2px solid white;
+  border-radius: 40px;
+  transition: all 0.3s;
+  cursor: pointer;
+  &:hover {
+    font-weight: bold;
+  }
+}
+
+.btn-full {
+  background-color: $color-primary-darker;
+  color: white;
+  text-transform: uppercase;
+  width: 70%;
+  font-family: $font-display;
+  font-weight: 300;
+  padding: 10px 20px;
+  margin: 10px 0;
+  cursor: pointer;
+  border: none;
+  transition: all .3s;
+  &:hover {
+    background-color: $color-primary-darkest;
+  }
+}
+
+.svg-icon-link {
+  fill: $color-grey-dark;
+  transition: all 0.3s;
+  &:hover {
+    fill: $color-primary;
+  }
+}
+
+// ------------ modal window --------------
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  min-width: 400px;
+  max-width: 90%;
+  height: auto;
+  z-index: 2000;
+  visibility: hidden;
+  backface-visibility: hidden;
+  transform: translate(-50%, -50%);
+
+  &__content {
+    background: $color-primary;
+    color: white;
+    text-align: center;
+      border: 1px solid $color-primary-darker;
+      border-bottom: 8px solid $color-primary-darker;
+  }
+
+  &__close {
+      position: absolute;
+      top: 17px;
+      right: 20px;
+      background: transparent;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 2.3rem;
+      padding: 3px;
+      transition: all 0.4s;
+    
+      &:hover {
+        transform: rotate(180deg);
+      }
+  }
+
+  &__overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    background: rgba(0,0,0,0.9);
+    transition: all 0.3s; 
+  }
+
+  &__heading {
+      background-color: $color-primary-darker;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 3rem;
+      text-transform: uppercase;
+  }
+
+}
+
+//adds this class to show modal window
+.modal-show {
+  visibility: visible;
+}
+
+.modal-show ~ .modal__overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* Modal Effect: fall */
+.modal-effect-fall.modal {
+  perspective: 1300px;
+}
+
+.modal-effect-fall .modal__content {
+  transform-style: preserve-3d; 
+  transform: translateZ(600px) rotateX(20deg); 
+  opacity: 0;
+}
+
+.modal-show.modal-effect-fall .modal__content {
+  transition: all 0.3s ease-in;
+  transform: translateZ(0px) rotateX(0deg); 
+  opacity: 1;
+}

@@ -55,8 +55,9 @@ html {
 }
 
 body {
+  perspective: 600px;
   font-family: $font-stack;
-  line-height: 1.5;
+  line-height: 1.6;
   font-weight: 400;
   font-size: 1.6rem;
   color: $color-grey-dark;
@@ -81,6 +82,12 @@ img {
 strong {
   font-weight: bold;
 }
+
+p {
+  text-align: left;
+  padding-bottom: 3.5rem;
+}
+
 
 .container {
   max-width: 1200px;

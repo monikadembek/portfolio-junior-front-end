@@ -14,8 +14,9 @@ html {
       font-size: 50%; } }
 
 body {
+  perspective: 600px;
   font-family: "Lato", sans-serif;
-  line-height: 1.5;
+  line-height: 1.6;
   font-weight: 400;
   font-size: 1.6rem;
   color: #3A3636;
@@ -31,6 +32,10 @@ ul {
 
 strong {
   font-weight: bold; }
+
+p {
+  text-align: left;
+  padding-bottom: 3.5rem; }
 
 .container {
   max-width: 1200px; }
@@ -54,6 +59,110 @@ strong {
 
 .u-accent-color {
   color: #a2c741; }
+
+.btn-round {
+  color: white;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  padding: 8px 18px;
+  border: 2px solid white;
+  border-radius: 40px;
+  transition: all 0.3s;
+  cursor: pointer; }
+  .btn-round:hover {
+    font-weight: bold; }
+
+.btn-full {
+  background-color: #75912b;
+  color: white;
+  text-transform: uppercase;
+  width: 70%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  padding: 10px 20px;
+  margin: 10px 0;
+  cursor: pointer;
+  border: none;
+  transition: all .3s; }
+  .btn-full:hover {
+    background-color: #657d25; }
+
+.svg-icon-link {
+  fill: #3A3636;
+  transition: all 0.3s; }
+  .svg-icon-link:hover {
+    fill: #a2c741; }
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  min-width: 400px;
+  max-width: 90%;
+  height: auto;
+  z-index: 2000;
+  visibility: hidden;
+  backface-visibility: hidden;
+  transform: translate(-50%, -50%); }
+  .modal__content {
+    background: #a2c741;
+    color: white;
+    text-align: center;
+    border: 1px solid #75912b;
+    border-bottom: 8px solid #75912b; }
+  .modal__close {
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 2.3rem;
+    padding: 3px;
+    transition: all 0.4s; }
+    .modal__close:hover {
+      transform: rotate(180deg); }
+  .modal__overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.9);
+    transition: all 0.3s; }
+  .modal__heading {
+    background-color: #75912b;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 3rem;
+    text-transform: uppercase; }
+
+.modal-show {
+  visibility: visible; }
+
+.modal-show ~ .modal__overlay {
+  opacity: 1;
+  visibility: visible; }
+
+/* Modal Effect: fall */
+.modal-effect-fall.modal {
+  perspective: 1300px; }
+
+.modal-effect-fall .modal__content {
+  transform-style: preserve-3d;
+  transform: translateZ(600px) rotateX(20deg);
+  opacity: 0; }
+
+.modal-show.modal-effect-fall .modal__content {
+  transition: all 0.3s ease-in;
+  transform: translateZ(0px) rotateX(0deg);
+  opacity: 1; }
 
 .main-header {
   display: flex;
@@ -127,71 +236,63 @@ strong {
     transform: scale(1.1) rotate(-6deg);
     background-color: #657d25;
     z-index: 200; }
+  .main-nav__contacts {
+    background-color: white;
+    grid-column-end: -1;
+    align-self: end;
+    justify-self: end;
+    display: flex;
+    flex-direction: row; }
+    .main-nav__contacts > * {
+      margin-left: 1.2rem; }
 
 .icon {
   fill: white;
   width: 50%;
   height: 50%; }
 
-.modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 50%;
-  max-width: 630px;
-  min-width: 320px;
-  height: auto;
-  z-index: 2000;
-  visibility: hidden;
-  backface-visibility: hidden;
-  transform: translate(-50%, -50%); }
+.modal-about {
+  padding: 20px;
+  text-align: center; }
+  .modal-about__heading-big {
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-size: 5rem;
+    text-align: center;
+    line-height: 5.2rem;
+    margin: 20px 0; }
+  .modal-about__line {
+    display: block;
+    width: 70%;
+    height: 3px;
+    background-color: white;
+    margin: 20px auto; }
+  .modal-about h4 {
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    font-size: 3rem;
+    text-transform: uppercase; }
+  .modal-about h5 {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 2.5rem; }
+  .modal-about__buttons-list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 20px;
+    width: 70%;
+    margin: 30px auto 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 1.6rem; }
+  .modal-about p {
+    width: 70%;
+    margin: 0 auto; }
 
-.modal-show {
-  visibility: visible; }
+.hide {
+  display: none; }
 
-.modal__content {
-  background: #a2c741;
-  padding: 30px;
-  color: white; }
-
-.modal__overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  visibility: hidden;
+.modal-about--second {
   opacity: 0;
-  background: rgba(0, 0, 0, 0.9);
+  visibility: hidden;
   transition: all 0.3s; }
-
-.modal-show ~ .modal__overlay {
-  opacity: 1;
-  visibility: visible; }
-
-.modal-effect-1 .modal__content {
-  transform: scale(0) rotate(720deg);
-  opacity: 0;
-  transition: all 0.5s; }
-
-.modal-show.modal-effect-1 .modal__content {
-  transform: scale(1) rotate(0deg);
-  opacity: 1; }
-
-/* Effect 5: fall */
-.modal-effect-5.modal {
-  perspective: 1300px; }
-
-.modal-effect-5 .modal__content {
-  transform-style: preserve-3d;
-  transform: translateZ(600px) rotateX(20deg);
-  opacity: 0; }
-
-.modal-show.modal-effect-5 .modal__content {
-  transition: all 0.3s ease-in;
-  transform: translateZ(0px) rotateX(0deg);
-  opacity: 1; }
-
-body {
-  perspective: 600px; }

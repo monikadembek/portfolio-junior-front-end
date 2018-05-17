@@ -110,6 +110,18 @@
       z-index: 200;
     }
   }  
+
+  &__contacts {
+    background-color: white;
+    grid-column-end: -1;
+    align-self: end;
+    justify-self: end;
+    display: flex;
+    flex-direction: row;
+    & > * {
+      margin-left: 1.2rem;
+    }
+  }
   
 }
 
