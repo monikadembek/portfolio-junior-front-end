@@ -14,6 +14,17 @@
     font-weight: 700;
     font-size: 2rem;
     letter-spacing: 1px;
-    line-height: 4.5rem;
+    line-height: 2.5rem;
     text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.heading-4 {
+	font-family: $font-stack;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: $color-grey-light;
 }

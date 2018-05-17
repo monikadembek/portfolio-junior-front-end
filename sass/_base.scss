@@ -12,6 +12,7 @@ $color-primary-dark: darken($color-primary, 10%);
 $color-primary-darker: darken($color-primary, 15%);
 $color-primary-darkest: darken($color-primary, 20%);
 $color-grey-dark: #3A3636;
+$color-grey-light: lighten($color-grey-dark, 30%);
 
 
 // ------- FONTS VARIABLES -------------------------

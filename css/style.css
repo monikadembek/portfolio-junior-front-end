@@ -54,11 +54,24 @@ p {
   font-weight: 700;
   font-size: 2rem;
   letter-spacing: 1px;
-  line-height: 4.5rem;
-  text-transform: uppercase; }
+  line-height: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 10px; }
+
+.heading-4 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #898080; }
 
 .u-accent-color {
   color: #a2c741; }
+
+.u-hide {
+  display: none; }
 
 .btn-round {
   color: white;
@@ -249,7 +262,8 @@ p {
 .icon {
   fill: white;
   width: 50%;
-  height: 50%; }
+  height: 50%;
+  margin-bottom: 10px; }
 
 .modal-about {
   padding: 20px;
@@ -289,10 +303,25 @@ p {
     width: 70%;
     margin: 0 auto; }
 
-.hide {
-  display: none; }
-
-.modal-about--second {
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s; }
+.modal-portfolio {
+  background-color: #ffffff;
+  color: #3A3636;
+  text-align: left;
+  padding: 20px;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 1fr 1fr; }
+  .modal-portfolio__item {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: auto 1fr; }
+  .modal-portfolio__num {
+    background-color: #a2c741;
+    color: #ffffff;
+    padding: 2rem;
+    font-size: 2.5rem; }
+  .modal-portfolio__project {
+    border: 2px solid #a2c741;
+    padding: 10px; }
+  .modal-portfolio p {
+    padding-bottom: 10px; }

@@ -50,29 +50,34 @@
 }
 
 
-.hide {
-    display: none;
+.modal-portfolio {
+    background-color: $color-white;
+    color: $color-grey-dark;
+    text-align: left;
+    padding: 20px; 
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr 1fr; 
+
+    &__item {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: auto 1fr;        
+    }
+
+    &__num {
+        background-color: $color-primary;
+        color: $color-white;
+        padding: 2rem;
+        font-size: 2.5rem;
+    }
+
+    &__project {
+        border: 2px solid $color-primary;
+        padding: 10px;
+    }
+    
+    p {
+        padding-bottom: 10px;
+    }
 }
-
-
-// .modal-about--first {
-//   //display: none;
-//   opacity: 0;
-//   visibility: hidden;
-//   transition: all 0.3s;
-// }
-
-// .modal-about--first.open {
-//   opacity: 1;
-//   visibility: visible;
-//   //display: block;
-// }
-
-.modal-about--second {
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s;
-  //display: none;
-}
-
-
