@@ -96,7 +96,11 @@
     &__container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 15px;    
+        grid-gap: 15px;   
+
+        @media only screen and (max-width: $bp-small) {
+            grid-template-columns: 1fr;
+        } 
     }
     
     &__box {
@@ -104,7 +108,8 @@
         border-bottom: 6px solid $color-primary;
 
         p {
-            text-align: center;    
+            text-align: center;
+            padding: 0 15px 10px;    
         }
         
     }
@@ -124,21 +129,28 @@
     }
     
     &__skills-icons {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        justify-items: center;
-        grid-gap: 15px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        // display: grid;
+        // grid-template-columns: 1fr 1fr;
+        // justify-items: center;
+        // grid-gap: 15px;
         margin-bottom: 20px;
 
         img {
             width: 50px;
-            height: auto;    
+            height: auto; 
+            margin: 10px;   
         }
         
     }
 
     @media only screen and (max-width: $bp-small) {
         grid-template-columns: 1fr;
+        padding: 20px 40px;
     }
 }
 
