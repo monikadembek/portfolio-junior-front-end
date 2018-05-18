@@ -43,11 +43,17 @@ p {
 .heading-1 {
   font-family: "Montserrat", sans-serif;
   font-size: 4rem; }
+  @media only screen and (max-width: 37.5em) {
+    .heading-1 {
+      font-size: 2.5rem; } }
 
 .heading-2 {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 3rem; }
+  @media only screen and (max-width: 37.5em) {
+    .heading-2 {
+      font-size: 2.5rem; } }
 
 .heading-3 {
   font-family: "Lato", sans-serif;
@@ -325,6 +331,9 @@ p {
     padding: 10px; }
   .modal-portfolio p {
     padding-bottom: 10px; }
+  @media only screen and (max-width: 37.5em) {
+    .modal-portfolio {
+      grid-template-columns: 1fr; } }
 
 .modal-facts {
   padding: 30px;
