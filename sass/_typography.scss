@@ -23,6 +23,10 @@
     line-height: 2.5rem;
     text-transform: uppercase;
     margin-bottom: 10px;
+
+    @media only screen and (max-width: $bp-medium) {
+    	font-size: 1.8rem;
+  	}
 }
 
 .heading-4 {

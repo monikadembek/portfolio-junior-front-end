@@ -29,10 +29,13 @@
 
   @media only screen and (max-width: $bp-medium) {
     grid-template-columns: repeat(3, minmax(100px, 200px));
+    grid-auto-rows: 150px;
+    grid-auto-columns: 150px;
   }
 
   @media only screen and (max-width: $bp-small) {
-    grid-template-columns: repeat(2, minmax(100px, 200px));
+    grid-template-rows: repeat(2, 150px);
+    
   }
   
   &__title {
@@ -54,6 +57,10 @@
     
     &--about {
       background-color: darken($color-primary, 10%);
+    }
+
+    &--facts {
+      background-color: $color-primary-light;
     }
     
     &--portfolio {
@@ -108,6 +115,7 @@
       transform: scale(1.1) rotate(-6deg);
       background-color: $color-primary-darkest;
       z-index: 200;
+      color: $color-white;
     }
   }  
 
@@ -130,4 +138,8 @@
   width: 50%;
   height: 50%;
   margin-bottom: 10px;
+  @media only screen and (max-width: $bp-medium) {
+    width: 65%;
+    height: 65%;    
+  }
 }

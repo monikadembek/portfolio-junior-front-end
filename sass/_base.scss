@@ -8,6 +8,7 @@
 
 $color-white: #ffffff;
 $color-primary: #a2c741;
+$color-primary-light: lighten($color-primary, 7%);
 $color-primary-dark: darken($color-primary, 10%);
 $color-primary-darker: darken($color-primary, 15%);
 $color-primary-darkest: darken($color-primary, 20%);
@@ -70,6 +71,10 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+  transition: all 0.3s;
+  &:hover {
+    color: $color-primary-darkest;
+  }
 }
 
 ul {

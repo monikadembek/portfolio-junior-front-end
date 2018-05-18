@@ -25,7 +25,10 @@ body {
 
 a {
   text-decoration: none;
-  color: inherit; }
+  color: inherit;
+  transition: all 0.3s; }
+  a:hover {
+    color: #657d25; }
 
 ul {
   list-style: none; }
@@ -63,6 +66,9 @@ p {
   line-height: 2.5rem;
   text-transform: uppercase;
   margin-bottom: 10px; }
+  @media only screen and (max-width: 50em) {
+    .heading-3 {
+      font-size: 1.8rem; } }
 
 .heading-4 {
   font-family: "Lato", sans-serif;
@@ -207,10 +213,12 @@ p {
       grid-auto-flow: dense; } }
   @media only screen and (max-width: 50em) {
     .main-nav {
-      grid-template-columns: repeat(3, minmax(100px, 200px)); } }
+      grid-template-columns: repeat(3, minmax(100px, 200px));
+      grid-auto-rows: 150px;
+      grid-auto-columns: 150px; } }
   @media only screen and (max-width: 37.5em) {
     .main-nav {
-      grid-template-columns: repeat(2, minmax(100px, 200px)); } }
+      grid-template-rows: repeat(2, 150px); } }
   .main-nav__title {
     grid-column: 1 / span 3; }
     @media only screen and (max-width: 37.5em) {
@@ -226,6 +234,8 @@ p {
     padding: 20px; }
     .main-nav__block--about {
       background-color: #84a530; }
+    .main-nav__block--facts {
+      background-color: #afcf5d; }
     .main-nav__block--portfolio {
       grid-row: 2;
       background-color: #75912b; }
@@ -256,7 +266,8 @@ p {
   .main-nav__link:hover, .main-nav__link:active {
     transform: scale(1.1) rotate(-6deg);
     background-color: #657d25;
-    z-index: 200; }
+    z-index: 200;
+    color: #ffffff; }
   .main-nav__contacts {
     background-color: white;
     grid-column-end: -1;
@@ -272,6 +283,10 @@ p {
   width: 50%;
   height: 50%;
   margin-bottom: 10px; }
+  @media only screen and (max-width: 50em) {
+    .icon {
+      width: 65%;
+      height: 65%; } }
 
 .modal-about {
   padding: 20px;
