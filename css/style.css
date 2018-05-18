@@ -335,6 +335,43 @@ p {
     .modal-portfolio {
       grid-template-columns: 1fr; } }
 
+.modal-skills {
+  background-color: #ffffff;
+  color: #3A3636;
+  text-align: center;
+  padding: 20px; }
+  .modal-skills__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px; }
+  .modal-skills__box {
+    border: 2px solid #a2c741;
+    border-bottom: 6px solid #a2c741; }
+    .modal-skills__box p {
+      text-align: center; }
+  .modal-skills__icon {
+    background-color: #a2c741;
+    padding: 20px;
+    margin-bottom: 25px;
+    color: #ffffff; }
+  .modal-skills__svg-main-icon {
+    width: 60px;
+    height: 60px;
+    fill: #ffffff;
+    margin-bottom: 8px; }
+  .modal-skills__skills-icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    grid-gap: 15px;
+    margin-bottom: 20px; }
+    .modal-skills__skills-icons img {
+      width: 50px;
+      height: auto; }
+  @media only screen and (max-width: 37.5em) {
+    .modal-skills {
+      grid-template-columns: 1fr; } }
+
 .modal-facts {
   padding: 30px;
   text-align: left;
