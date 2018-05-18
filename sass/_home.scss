@@ -81,3 +81,35 @@
         padding-bottom: 10px;
     }
 }
+
+
+.modal-skills {
+    
+}
+
+
+.modal-facts {
+    padding: 30px;
+    text-align: left;
+    font-size: 1.8rem;
+    &__list-item {
+        margin-bottom: 15px;
+        padding-left: 20px;
+        &::before {
+            display: inline-block;
+            content: url(../img/baseline-done-24px.svg);
+            width: 20px;
+            height: 20px;
+            transform: translateY(5px);
+            margin-right: 15px;
+        }
+    }
+}
+
+
+.modal-contact {
+    background-color: $color-white;
+    color: $color-grey-dark;
+    text-align: left;
+    padding: 30px; 
+}

@@ -325,3 +325,24 @@ p {
     padding: 10px; }
   .modal-portfolio p {
     padding-bottom: 10px; }
+
+.modal-facts {
+  padding: 30px;
+  text-align: left;
+  font-size: 1.8rem; }
+  .modal-facts__list-item {
+    margin-bottom: 15px;
+    padding-left: 20px; }
+    .modal-facts__list-item::before {
+      display: inline-block;
+      content: url(../img/baseline-done-24px.svg);
+      width: 20px;
+      height: 20px;
+      transform: translateY(5px);
+      margin-right: 15px; }
+
+.modal-contact {
+  background-color: #ffffff;
+  color: #3A3636;
+  text-align: left;
+  padding: 30px; }
