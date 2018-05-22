@@ -108,14 +108,16 @@
                         <h2 class="modal-about__heading-big">
                             Monika Dembek
                         </h2>
-                        <p>Hi.<br>
-                            My name is Monika Dembek. I'm from Bydgoszcz, Poland. I've been working as a graphic designer for the past 12 years, designing mainly DTP materials. I've come to a point where I want some change.
-                        </p>
-                        <p>At the beginning of 2018 I finally fully commited to focus on learning front-end development. Day by day I've been getting to know HTML, CSS and JavaScript. Then came sass, git and some jquery. JavaScript was the toughest part for me and still is, but it is rewarding when you finally are able to write some simple scripts that actually do something.  
-                        </p>
-                        <p>
-                            The aim of this website is to present my current skills and examples of my code, which could possibly help me find my first job as a junior front-end developer.
-                        </p>
+                        <div>
+                            <p>Hi.<br>
+                                My name is Monika Dembek. I'm from Bydgoszcz, Poland. I've been working as a graphic designer for the past 12 years, designing mainly DTP materials. I've come to a point where I want some change.
+                            </p>
+                            <p>At the beginning of 2018 I finally fully commited to learning front-end development. Day by day I've been getting to know HTML, CSS and JavaScript. Then came sass, git and some jquery. JavaScript was the toughest part for me and still is as so far I've only grasped basics. I am able to write some simple scripts and want to further improve my JavaScript skills.
+                            </p>
+                            <p>
+                                I created this website to present my current skills and examples of my code, which could possibly help me find my first job as a junior front-end developer.
+                            </p>
+                        </div>     
                         <button class="btn-full btn-less">read less...</button>
                         <div class="modal-about__buttons-list">
                             <a href="http://front-end.minadesign.pl/email-praca/Monika Dembek CV junior front-end dev 2018 en.pdf" target="_blank">CV</a>
@@ -338,21 +340,37 @@
                     Contact
                 </h3>
                 <div class="modal-contact">
-                    <p>Monika Dembek</p>
-                    <p>
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-                            <title>phone</title>
-                            <path d="M22 20c-2 2-2 4-4 4s-4-2-6-4-4-4-4-6 2-2 4-4-4-8-6-8-6 6-6 6c0 4 4.109 12.109 8 16s12 8 16 8c0 0 6-4 6-6s-6-8-8-6z"></path>
-                        </svg>
-                        <a href="tel:0048608414676">+48 608 414 676</a>
-                    </p>
-                    <p>
-                        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                           <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/>
-                        </svg>
-                        <a href="mailto:monika.dembek@gmail.com">monika.dembek@gmail.com</a>
-                    </p>
-                    
+                    <div class="modal-contact__data">
+                        <h3 class="heading-3">Monika Dembek</h3>
+                        <p>
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32">
+                                <title>phone</title>
+                                <path d="M22 20c-2 2-2 4-4 4s-4-2-6-4-4-4-4-6 2-2 4-4-4-8-6-8-6 6-6 6c0 4 4.109 12.109 8 16s12 8 16 8c0 0 6-4 6-6s-6-8-8-6z"></path>
+                            </svg>
+                            <a href="tel:0048608414676">+48 608 414 676</a>
+
+                            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                               <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/>
+                            </svg>
+                            <a href="mailto:monika.dembek@gmail.com">monika.dembek@gmail.com</a>
+                        </p>
+                    </div>
+                    <form id="form" class="form">
+                        <div class="form__group">
+                            <input type="text" placeholder="Topic" id="topic" name="topic" class="form__input" required>
+                            <label for="topic" class="form__label">Topic</label>
+                        </div>
+                        <div class="form__group">
+                            <input type="email" id="email" placeholder="E-mail" name="email" class="form__input" required>
+                            <label for="email" class="form__label">E-mail</label>
+                        </div>
+                        <div class="form__group">
+                            <textarea id="message" placeholder="Message..." name="message" class="form__textarea" required></textarea>
+                            <label for="message" class="form__label">Message</label>
+                        </div>
+                        <input type="submit" value="Send" class="btn-full">
+                        <span id="status" class="form__status"></span>
+                    </form>
                     
                 </div> <!--end modal skills-->
             </div><!--end modal content-->
@@ -366,5 +384,6 @@
     </footer>
     
     <script src="js/modalWindowTransition.js"></script>
+    <script src="js/form.js"></script>
 </body>
 </html>

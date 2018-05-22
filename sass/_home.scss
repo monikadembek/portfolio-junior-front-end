@@ -10,6 +10,7 @@
 		line-height: 5.2rem;
 		margin: 20px 0;
 	}
+
 	
     &__line {
         display: block;
@@ -179,4 +180,27 @@
     color: $color-grey-dark;
     text-align: left;
     padding: 30px; 
+    //margin: 0 auto;
+
+    &__data {
+        margin: 0 auto;
+        text-align: center;
+        p {
+            text-align: center;
+        }
+
+        svg {
+            fill: $color-primary;
+            transform: translateY(0.5rem);
+            display: inline-block;
+        }
+
+        svg:last-of-type {
+            margin-left: 2rem;
+        }
+    }
+
+    form {
+        margin: 0 auto;
+    }
 }
