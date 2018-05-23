@@ -487,18 +487,20 @@ body {
 .modal-contact {
   background-color: #ffffff;
   color: #3A3636;
-  text-align: left;
   padding: 30px; }
   .modal-contact__data {
     margin: 0 auto;
-    text-align: center; }
-    .modal-contact__data p {
-      text-align: center; }
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 3rem; }
+    .modal-contact__data > *:not(last-child) {
+      margin-left: 1.5rem; }
     .modal-contact__data svg {
       fill: #a2c741;
       transform: translateY(0.5rem);
       display: inline-block; }
-    .modal-contact__data svg:last-of-type {
-      margin-left: 2rem; }
   .modal-contact form {
-    margin: 0 auto; }
+    margin: 0 auto;
+    text-align: left; }

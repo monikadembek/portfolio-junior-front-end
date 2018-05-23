@@ -202,29 +202,31 @@
 .modal-contact {
     background-color: $color-white;
     color: $color-grey-dark;
-    text-align: left;
     padding: 30px; 
-    //margin: 0 auto;
+    
 
     &__data {
         margin: 0 auto;
         text-align: center;
-        p {
-            text-align: center;
-        }
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 3rem;
+
+        & > *:not(last-child) {
+            margin-left: 1.5rem;
+        } 
 
         svg {
             fill: $color-primary;
             transform: translateY(0.5rem);
             display: inline-block;
         }
-
-        svg:last-of-type {
-            margin-left: 2rem;
-        }
     }
 
     form {
         margin: 0 auto;
+        text-align: left;
     }
 }
