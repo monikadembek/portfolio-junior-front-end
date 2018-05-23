@@ -340,8 +340,14 @@ body {
       height: 65%; } }
 
 .modal-about {
-  padding: 20px;
+  padding: 30px;
   text-align: center; }
+  .modal-about--first-page, .modal-about--second-page {
+    width: 70%;
+    margin: 0 auto; }
+    @media only screen and (max-width: 37.5em) {
+      .modal-about--first-page, .modal-about--second-page {
+        width: 100%; } }
   .modal-about__heading-big {
     font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
@@ -351,7 +357,7 @@ body {
     margin: 20px 0; }
   .modal-about__line {
     display: block;
-    width: 70%;
+    width: 100%;
     height: 3px;
     background-color: white;
     margin: 20px auto; }
