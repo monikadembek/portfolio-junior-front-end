@@ -11,7 +11,7 @@ window.addEventListener("load", function() {
 		formdata.append("message", message.value);
 
 		var ajax = new XMLHttpRequest();
-		ajax.open("POST", "http://front-end.minadesign.pl/portfolio-form-script/send-form.php");
+		ajax.open("POST", "http://frontend.minadesign.pl/send-form.php");
 		ajax.onreadystatechange = function() {
 			if (ajax.readyState == 4 && ajax.status == 200) {
 				if (ajax.responseText == "success") {
