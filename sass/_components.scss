@@ -46,7 +46,7 @@
   top: 50%;
   left: 50%;
   width: 800px;
-  min-width: 400px;
+  //min-width: 400px;
   max-width: 90%;
   height: auto;
   max-height: 100%;
@@ -113,6 +113,19 @@
 .modal-show ~ .modal__overlay {
   opacity: 1;
   visibility: visible;
+}
+
+
+// effect-1
+.modal-effect-1 .modal__content {
+  transform: scale(0) rotate(720deg);
+  opacity: 0;
+  transition: all 0.5s;
+} 
+
+.modal-show.modal-effect-1 .modal__content {
+  transform: scale(1) rotate(0deg);
+  opacity: 1;
 }
 
 

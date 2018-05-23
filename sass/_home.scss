@@ -45,6 +45,21 @@
         font-size: 2.5rem;
     }
 
+    &__profile-pic {
+        width: 15rem;
+        height: 15rem;
+        background-image: url(../img/mina-pic.jpg);
+        background-size: cover;
+        filter: grayscale(100%);
+        // opacity: 0.9;
+        display: inline-block;
+        float: left;
+        border: 2px solid $color-white;
+        border-radius: 4px;
+        margin: 0 1rem 1rem 0;
+    }
+
+
     &__buttons-list {
         display: grid;
         grid-auto-flow: column;
@@ -56,10 +71,7 @@
         font-size: 1.6rem;
     }
 
-    p {
-        width: 70%;
-        margin: 0 auto;
-    }
+   
 }
 
 
